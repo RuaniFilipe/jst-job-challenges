@@ -1,14 +1,15 @@
 import React from 'react';
+import Input from './Components/Input';
+import DataProvider from './Provider/Context';
 import GlobalStyles from './Styles/GlobalStyles';
 
-import Home from './Pages/Home'
 
 const App: React.FC = () => {
   return (
-    <>
+    <DataProvider>
       <GlobalStyles />
-      <Home />
-    </>
+      <Input />
+    </DataProvider>
   );
 }
 
