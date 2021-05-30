@@ -4,16 +4,11 @@ import { Context } from '../../Provider/Context';
 import axiosData from '../../Services/requestAPI';
 
 function Input() {
-    const { pokemons, setPokemons, filter, setFilter, setFilterData } = useContext(Context)
+    const { pokemons, setPokemons, setFilter } = useContext(Context)
     useEffect(async () => {
     const { data: {results} } = await axiosData('?limit=151');
     setPokemons(results)
-  }, []);
-
-  useEffect(async() => {
-    const filterSelected = await axiosData(filter)
-    setFilterData(filterSelected)
-  }, [filter]);
+  }, []); 
   
   return (
     <>
