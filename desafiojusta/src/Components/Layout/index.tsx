@@ -12,7 +12,6 @@ const Layout: React.FC = () => {
       <Dropdown />
       <Content />
     </Container>
-
   );
 }
 

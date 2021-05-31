@@ -1,4 +1,5 @@
 import React from 'react';
+import CardDetails from '../CardDetails';
 
 import {
   Container
@@ -7,7 +8,7 @@ import {
 const Content: React.FC = () => {
   return (
     <Container>
-      <h1>Content</h1>
+      <CardDetails />
     </Container>
   );
 }

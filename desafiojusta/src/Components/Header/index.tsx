@@ -5,7 +5,7 @@ const Header: React.FC = () => {
 
   return (
     <Container>
-    <h1>Header</h1>
+    <h1>Seja bem vindo(a), Treinador(a) Pokémon</h1>
     </Container>
   );
 }
