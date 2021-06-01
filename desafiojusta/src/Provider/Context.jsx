@@ -6,14 +6,13 @@ const DataProvider = ({ children }) => {
   const [pokemons, setPokemons] = useState([]);
   const [filter, setFilter] = useState('');
   const [filterData, setFilterData] = useState();
+  const [loading, setLoading] = useState(true);
 
   const store = {
-    pokemons,
-    setPokemons,
-    filter, 
-    setFilter,
-    filterData, 
-    setFilterData,
+    pokemons, setPokemons,
+    filter, setFilter,
+    filterData, setFilterData,
+    loading, setLoading
   };
 
   return (

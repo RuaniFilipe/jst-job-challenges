@@ -1,5 +1,4 @@
 import React from 'react';
-import Content from '../Content';
 import Dropdown from '../Dropdown';
 import Header from '../Header';
 
@@ -10,7 +9,6 @@ const Layout: React.FC = () => {
     <Container>
       <Header />
       <Dropdown />
-      <Content />
     </Container>
   );
 }

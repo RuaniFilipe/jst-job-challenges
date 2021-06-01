@@ -1,9 +1,7 @@
-import React from 'react';
-import CardDetails from '../CardDetails';
+import React from "react";
+import CardDetails from "../CardDetails";
 
-import {
-  Container
-} from './styles';
+import { Container } from "./styles";
 
 const Content: React.FC = () => {
   return (
@@ -11,6 +9,6 @@ const Content: React.FC = () => {
       <CardDetails />
     </Container>
   );
-}
+};
 
 export default Content;

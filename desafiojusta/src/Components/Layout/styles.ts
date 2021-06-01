@@ -4,10 +4,10 @@ export const Container = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
   text-align: center;
 `; 
+
 
 // display: grid;
 //grid-template-columns: 250px auto;

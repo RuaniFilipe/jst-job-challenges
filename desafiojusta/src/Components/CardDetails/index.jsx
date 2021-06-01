@@ -1,22 +1,40 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useContext, useEffect } from 'react';
-import { Context } from '../../Provider/Context';
-import axiosData from '../../Services/requestAPI';
+import React, { useContext } from "react";
+import { useHistory } from 'react-router-dom';
+import { Context } from "../../Provider/Context";
 
 function CardDetails() {
-    const { filterData, setFilterData, filter } = useContext(Context)
+  const history = useHistory();
+  const { filterData } = useContext(Context);
+  const {
+    data: { sprites, name, abilities, types },
+  } = filterData;
 
-    useEffect(async() => {
-      const filterSelected = await axiosData(filter)
-      setFilterData(filterSelected)
-    }, []);
+  const handleHome = () => {
+    history.push('/');
+  }
 
   return (
     <>
-    {/* <img src={filterData.data.sprites['front_default']} alt={filterData.data.name} /> */}
-    {console.log(filterData)}
+    <button onClick={() => handleHome()}>Voltar para a Pokebola</button>
+      <div>
+        <h1>{name}</h1>
+        <img src={sprites["front_default"]} alt={name} />
+        <p>
+          Poderes do {name}:
+          {abilities.map((pokemon) => (
+            <h3>{pokemon.ability.name}</h3>
+          ))}
+        </p>
+        <p>
+          Tipos do {name}:
+          {types.map((pokemon) => (
+            <h3>{pokemon.type.name}</h3>
+          ))}
+        </p>
+      </div>
     </>
-    )
+  );
 }
 
-export default CardDetails; 
+export default CardDetails;
