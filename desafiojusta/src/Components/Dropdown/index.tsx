@@ -1,8 +1,7 @@
-import React from 'react';
-import Input from '../Input';
+import React from "react";
+import Input from "../Input";
 
-import {
-  Container } from './styles';
+import { Container } from "./styles";
 
 const Dropdown: React.FC = () => {
   return (
@@ -10,6 +9,6 @@ const Dropdown: React.FC = () => {
       <Input />
     </Container>
   );
-}
+};
 
 export default Dropdown;

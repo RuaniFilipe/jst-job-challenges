@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useContext } from "react";
-import { useHistory } from 'react-router-dom';
+import { useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { Context } from "../../Provider/Context";
 
 function CardDetails() {
@@ -11,12 +11,12 @@ function CardDetails() {
   } = filterData;
 
   const handleHome = () => {
-    history.push('/');
-  }
+    history.push("/");
+  };
 
   return (
     <>
-    <button onClick={() => handleHome()}>Voltar para a Pokebola</button>
+      <button onClick={() => handleHome()}>Voltar para a Pokebola</button>
       <div>
         <h1>{name}</h1>
         <img src={sprites["front_default"]} alt={name} />

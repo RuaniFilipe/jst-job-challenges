@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   align-items: center;
@@ -6,12 +6,4 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-`; 
-
-
-// display: grid;
-//grid-template-columns: 250px auto;
-//grid-template-rows: 70px auto;
-//grid-template-areas: 
-//  'AS MH'
-//  'AS CT'
+`;
